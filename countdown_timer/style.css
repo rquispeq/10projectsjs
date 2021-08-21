@@ -1,0 +1,66 @@
+/* 
+Creator: github.com/rquispeq
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(cover2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+    font-family: 'Roboto Slab', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8em;
+    color: #EFF5F6;
+    text-shadow: 0px 0px 5px rgb(53, 45, 45);
+}
+
+h1{
+    letter-spacing: 0.05em;
+    font-size: 4em;
+    font-weight: normal;
+    margin-top: -3em;
+}
+
+.countdown{
+    display: flex;
+    gap: 10em;
+    text-align: center;
+}
+
+.time{
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.countdown span{
+    font-size: 1.5em;
+}
+
+footer{
+    position: absolute;
+    bottom: 5px;
+}
+
+footer a{
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:visited{
+    color: inherit;
+}
