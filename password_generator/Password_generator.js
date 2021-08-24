@@ -27,15 +27,8 @@ export class Password_generator{
         return password
     }
 
-    // setCharacterschecked(){
-    //     this.characters_checked = this.characters.filter( (value,index) => this.index )
-    //     console.log(this.characters_checked)
-    // }
-
     getCharacter(){
-        if (this.uppercase || this.lowercase || this.numbers || this.symbols) {
-            return ''
-        }
+        
         do{
 
             let random_character = this.random(0,this.characters.length - 1)

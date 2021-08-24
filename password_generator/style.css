@@ -75,6 +75,12 @@ button{
     justify-content: space-between;
 }
 
+.error{
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
 input[type=number]{
     width: 5em;
 }
