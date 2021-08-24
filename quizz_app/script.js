@@ -67,20 +67,20 @@ function loadQuiz(){
 submit.addEventListener('click',() => {
     const answer = getSelected();
 
-        if (answer) {
-            score += quizData[currentQuestion].correct === answer.id ? 1 : 0;
-            console.log(score);
-            currentQuestion++;
-            if (currentQuestion < quizData.length) {
-                loadQuiz();
-            } else {
-                quiz.innerHTML = `
-                    <h2>Contestaste correctamente ${score}/${quizData.length}</h2>
-                    <button onClick="location.reload()">Recargar</button>`;
-            }
+    if (answer) {
+        score += quizData[currentQuestion].correct === answer.id ? 1 : 0;
+        console.log(score);
+        currentQuestion++;
+        if (currentQuestion < quizData.length) {
+            loadQuiz();
         } else {
-            error.style.display = 'block';
+            quiz.innerHTML = `
+                <h2>Contestaste correctamente ${score}/${quizData.length}</h2>
+                <button onClick="location.reload()">Recargar</button>`;
         }
+    } else {
+        error.style.display = 'block';
+    }
     
 
     
