@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #ece9e6;
+    background: linear-gradient(to right, #ffffff,#ece9e6);
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+img{
+    max-width: 100%;
+}
+
+.mobile-container{
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #3333331A;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header input{
+    background-color: #efefef;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+}
+
+header button{
+    background-color: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.fav-container{
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(233,199,255);
+}
+
+.fav-meals{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.fav-meals li{
+    width: 85px;
+}
+
+.fav-meals li img{
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 5px #3333331A;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+}
+
+.fav-meals li span{
+    font-size: 0.9rem;
+}
