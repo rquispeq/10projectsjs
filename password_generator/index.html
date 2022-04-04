@@ -13,7 +13,10 @@
         <h1 class="title skin-title">Password Generator</h1>
         <div class="password-container bg-password-container">
             <span class="password" id="password_generated"></span>
-            <button class="btn btn-paste far fa-clipboard"></button>
+            <button id="btn_paste" class="btn btn-paste far fa-clipboard">
+
+                <span id="tooltip_clipboard">Added to clipboard!</span>
+            </button>
         </div>
         <div class="error">Debe seleccionar al menos un caracter de generación</div>
         <div class="input-container">

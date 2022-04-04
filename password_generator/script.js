@@ -1,6 +1,7 @@
 import { Password_generator } from "./Password_generator.js";
 
 const btn_generate = document.getElementById('btn_generate')
+const password_generated = document.getElementById('password_generated')
 
 btn_generate.addEventListener('click',(e)=>{
     document.querySelector('.error').style.display = 'none'
@@ -21,4 +22,12 @@ btn_generate.addEventListener('click',(e)=>{
     const password_container_generated = document.getElementById('password_generated')
 
     password_container_generated.textContent = password
+})
+
+
+btn_paste.addEventListener('click', () => {
+    navigator.clipboard.writeText(password_generated.textContent)
+    const tooltip_clipboard = document.getElementById('tooltip_clipboard')
+    tooltip_clipboard.style.display = 'block'
+    setTimeout(() => tooltip_clipboard.style.display = 'none' ,5000)
 })

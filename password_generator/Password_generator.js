@@ -13,8 +13,6 @@ export class Password_generator{
         this.symbols_array = ['!','@','#','$','%','^','&','*','(',')','-','_','=','+','[',']','{','}',';','/','<','>','?','¿']
 
         this.characters = ['uppercase','lowercase','numbers','symbols']
-        // this.characters_checked = []
-        // this.setCharacterschecked()
     }
 
     generatePassword(){
