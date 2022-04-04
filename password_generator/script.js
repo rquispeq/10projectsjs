@@ -3,6 +3,7 @@ import { Password_generator } from "./Password_generator.js";
 const btn_generate = document.getElementById('btn_generate')
 
 btn_generate.addEventListener('click',(e)=>{
+    document.querySelector('.error').style.display = 'none'
     const password_length = document.getElementById('input-length').value
     const upper_checkbox = document.getElementById('input-uppercase').checked
     const lower_checkbox = document.getElementById('input-lowercase').checked
