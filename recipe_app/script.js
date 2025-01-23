@@ -10,3 +10,21 @@ btn_open_sidebar.addEventListener("click", function(){
 btn_close_sidebar.addEventListener("click", function(){
     sidebar_menu.classList.remove("active");
 })
+
+const btn_search = document.getElementById('search')
+const img_logo = document.getElementById('logo')
+const txt_search = document.getElementById('txt_search')
+const close_search = document.getElementById('close_search')
+btn_search.addEventListener("click", function(){
+    img_logo.classList.add('hide')
+    btn_search.classList.add('hide')
+    txt_search.classList.remove('hide')
+    close_search.classList.remove('hide')
+})
+
+close_search.addEventListener("click", function(){
+    img_logo.classList.remove('hide')
+    btn_search.classList.remove('hide')
+    txt_search.classList.add('hide')
+    close_search.classList.add('hide')
+})
