@@ -13,7 +13,10 @@
 
         <h1>todos</h1>
         <div class="todo_container">
-            <input class="txt_todo" type="text" placeholder="Enter your todo" />
+            <form action="" id="form_todo">
+                <input id="txt_todo" name="txt_todo" class="txt_todo" type="text" placeholder="Enter your todo" />
+            </form>
+            <div id="todo_list"></div>
         </div>
         <p>
             <label for="">Left click to toggle complete.</label>
@@ -21,6 +24,7 @@
             <label for="">Right click to delete the todo.</label>
         </p>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

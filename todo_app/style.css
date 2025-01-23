@@ -35,6 +35,13 @@ h1{
     color: lightgray;
 }
 
+#todo_list div.txt_todo{
+    border-top: 1px solid lightgray;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
 p label{
     font-size: 0.9rem;
     color: rgb(179, 179, 179);
