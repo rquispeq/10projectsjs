@@ -1,5 +1,5 @@
-const new_year = new Date('2022-01-01 00:00:00')
-
+const newYear = (new Date).getFullYear() + 1
+const new_year = new Date(newYear + '-01-01 00:00:00')
 function countdown() {
     const now = new Date()
     let time_left = new_year - now
@@ -8,7 +8,6 @@ function countdown() {
     const hours = Math.floor(totalseconds / 3600 % 24)
     const days = Math.floor(totalseconds / 3600 / 24)
     const seconds = Math.floor(totalseconds % 60)
-    console.log(days,hours,minutes,seconds)
 
     const el_days = document.getElementById('days')
     const el_hours = document.getElementById('hours')

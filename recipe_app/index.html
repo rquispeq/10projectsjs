@@ -1,52 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <title>Recipes App</title>
 </head>
+
 <body>
     <div class="mobile-container">
-        <header>
-            <input type="text" name="" id="">
-            <button id="search"><i class="fas fa-search"></i></button>
-        </header>
-        <div class="fav-container">
-            <h3>Favorite Meals</h3>
-            <ul class="fav-meals">
+        <div class="sidebar_menu">
+            <button type="button" class="close_sidebar_menu fa fa-times"></button>
+            <ul>
                 <li>
-                    <img src="https://picsum.photos/200" alt="">
-                    <span>food 1</span>
+                    <a href="">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
                 </li>
                 <li>
-                    <img src="https://picsum.photos/200" alt="">
-                    <span>food 2</span>
+                    <a href="">
+                        <i class="fas fa-utensils"></i>
+                        <span>Recipes</span>
+                    </a>
                 </li>
                 <li>
-                    <img src="https://picsum.photos/200" alt="">
-                    <span>food 3</span>
+                    <a href="">
+                        <i class="fas fa-heart"></i>
+                        <span>Favorites</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
                 </li>
             </ul>
         </div>
-        <div class="meals">
-            <div class="meal">
-                <div class="meal-header">
-                    <span class="random">
-                        Random Recipe
-                    </span>
-                    <img src="https://picsum.photos/600" alt="">
+        <header>
+            <button class="btn_menu"><i class="fas fa-bars"></i></button>
+            <div class="logo-input">
+                <img id="logo" src="images/logo3.jpg" alt="" srcset="">
+                <input type="text" name="" id="txt_search" placeholder="Search..." class="hide">
+            </div>
+            <button id="search"><i class="fas fa-search"></i></button>
+            <button id="close_search" class="hide"><i class="fas fa-times "></i></button>
+        </header>
+        <div class="fav-container">
+            <ul class="fav-meals">
+                <li>
+                    <a href="">
+                        <img src="images/bread.jpg" alt="">
+                        <span>Bread</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/chicke_story.jpg" alt="">
+                        <span>Chicken</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/dessert.jpg" alt="">
+                        <span>Dessert</span>
+                    </a>
+                    <a href="">
+                </li></a>
+                <li>
+                    <a href="">
+                        <img src="images/pasta.jpg" alt="">
+                        <span>Pasta</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <img src="images/salad.jpg" alt="">
+                        <span>Salad</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="main-content">
+
+            <div class="personalize">
+                <div class="title">
+                    <div class="container-close">
+                        <h3>Personalize</h3>
+                        <span>your recommendations</span>
+                    </div>
+                    <button class="fa fa-times close-personalize"></button>
                 </div>
-                <div class="meal-body">
-                    <h4>Traditional Food</h4>
-                    <button class="active">
-                        <i class="fas fa-heart"></i>
-                    </button>
+                <div class="container-button">
+                    <button>Start personalizing</button>
+                </div>
+            </div>
+            <div class="meals">
+                <div class="meal">
+                    <div class="meal-header">
+                        <span class="random">
+                            Recipe of the Day
+                        </span>
+                        <img src="images/chicken.jpg" alt="">
+                    </div>
+                    <div class="meal-body">
+                        <h4>Chicken spicy</h4>
+                        <button class="active">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
