@@ -25,7 +25,7 @@ h1{
     margin-bottom: 50px;
 }
 
-.txt_todo{
+.txt_todo, .task{
     font-size: 2rem;
     padding: 1rem 2rem;
     border: none;
@@ -35,7 +35,7 @@ h1{
     color: lightgray;
 }
 
-#todo_list div.txt_todo{
+#todo_list div.task{
     border-top: 1px solid lightgray;
     text-align: left;
     cursor: pointer;
