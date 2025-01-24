@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -13,51 +13,43 @@ body{
     height: 100vh;
 }
 
-h1{
+h1 {
     margin: 8rem;
     font-size: 11rem;
     color: rgb(236, 202, 236);
 }
 
-.todo_container{
+.todo_container {
     display: inline-block;
-    box-shadow: 0px 0px  20px #e7e7e7;
+    box-shadow: 0px 0px 20px #e7e7e7;
     margin-bottom: 50px;
 }
 
-.txt_todo, .task{
+.txt_todo,
+.task {
     font-size: 2rem;
     padding: 1rem 2rem;
     border: none;
 }
 
-.txt_todo::placeholder{
+.txt_todo::placeholder {
     color: lightgray;
 }
 
-#todo_list div.task{
+#todo_list div.task {
     border-top: 1px solid lightgray;
     text-align: left;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-#todo_list div.task.done{
+#todo_list div.task.done {
     color: lightgray;
     text-decoration: line-through;
 }
 
-p label{
+p label {
     font-size: 0.9rem;
     color: rgb(179, 179, 179);
     line-height: 1.5rem;
 }
-
-
-
-/* .content{
-    margin: 0 auto;
-    min-height: 100vh;
-    display: inline-block;
-} */
-

@@ -28,15 +28,15 @@ function fillList() {
 
 // complete task
 
-const featureToggleTask = task => {
+const featureToggleTask = (task) => {
     task.addEventListener("click", (e) => {
         task.classList.toggle("done");
     });
 };
 
-const functionRemoveTask = task =>{
+const functionRemoveTask = (task) => {
     task.addEventListener("contextmenu", (e) => {
-        e.preventDefault()
-        task.remove()
+        e.preventDefault();
+        task.remove();
     });
-}
+};
