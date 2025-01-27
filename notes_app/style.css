@@ -6,7 +6,7 @@
 
 body{
     height: 100vh;
-    background-color: aqua;
+    background-color: rgb(102, 192, 228);
 }
 
 button{
@@ -27,7 +27,7 @@ button{
     top: 1.5rem;
     position: absolute;
     padding: 0.5rem 1rem;
-    background-color: green;
+    background-color: rgb(157, 218, 99);
     color: white;
     border: none;
 }
@@ -42,7 +42,7 @@ button{
     display: flex;
     justify-content: end;
     padding: 0.5rem 0.75rem;
-    background-color: green;
+    background-color: rgb(157, 218, 99);
     gap: 1rem;
 }
 
