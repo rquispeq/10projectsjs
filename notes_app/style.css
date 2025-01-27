@@ -26,6 +26,10 @@ button{
     right: 1.5rem;
     top: 1.5rem;
     position: absolute;
+    padding: 0.5rem 1rem;
+    background-color: green;
+    color: white;
+    border: none;
 }
 
 .container-notes{
