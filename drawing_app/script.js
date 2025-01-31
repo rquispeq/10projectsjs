@@ -3,6 +3,7 @@ const btn_decrease_size = document.getElementById('btn_decrease_size')
 const btn_set_size = document.getElementById('btn_set_size')
 const btn_increase_size = document.getElementById('btn_increase_size')
 const btn_change_color = document.getElementById('btn_change_color')
+const btn_clear_canvas = document.getElementById('btn_clear_canvas')
 
 let isPressed = false;
 let originX = 0
@@ -22,6 +23,11 @@ btn_decrease_size.addEventListener('click', e => {
     draw_size = draw_size - 5
     btn_set_size.textContent = draw_size
   }
+})
+
+btn_clear_canvas.addEventListener('click', e => {
+  let ctx = canvasContainer.getContext('2d')
+  ctx.clearRect(0,0,canvasContainer.width,canvasContainer.height)
 })
 
 

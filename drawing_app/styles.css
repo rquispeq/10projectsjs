@@ -9,6 +9,8 @@ canvas {
 
 body{
     height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .container{
@@ -17,16 +19,22 @@ body{
     justify-content: center;
     flex-direction: column;
     height: 100%;
+    width: 800px;
+}
+
+#stockGraph{
+    border: 2px solid purple;
 }
 
 .options{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 400px;
+    width: 804px;
     padding: 1rem;
     background-color: purple;
     gap: 0.5rem;
+    border: 2px solid purple;
 }
 
 .options button, span, input{
