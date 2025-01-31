@@ -1,54 +1,38 @@
 let canvasContainer = document.getElementById("stockGraph");
+const btn_decrease_size = document.getElementById('btn_decrease_size')
+const btn_set_size = document.getElementById('btn_set_size')
+const btn_increase_size = document.getElementById('btn_increase_size')
+const btn_change_color = document.getElementById('btn_change_color')
 
 let isPressed = false;
 let originX = 0
 let originY = 0
-function draw() {
-    if (canvasContainer.getContext) {
-        let ctx = canvasContainer.getContext("2d");
-        // ctx.beginPath();
-        // ctx.arc(75, 75, 50, 0, Math.PI*2, true); // Círculo externo
-        // ctx.moveTo(110, 75);
-        // ctx.arc(75, 75, 35, 0, Math.PI, ); // Boca (en el sentido de las agujas del reloj)
-        // ctx.moveTo(65, 65);
-        // ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Ojo izquierdo
-        // ctx.moveTo(95, 65);
-        // ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Ojo derecho
-        // ctx.stroke();
+let draw_size = parseInt(btn_set_size.textContent)
 
-        // for (let i = 0; i < 4; i++) {
-        //     for (let j = 0; j < 3; j++) {
-        //       ctx.beginPath();
-        //       const x = 25 + j * 50; // Coordenada x
-        //       const y = 25 + i * 50; // Coordenada y
-        //       const radius = 20; // Radio del Arco
-        //       const startAngle = 0; // Punto inicial del Círculo
-        //       const endAngle = Math.PI + (Math.PI * j) / 2; // Punto final del Círculo
-        //       const counterclockwise = i % 2 !== 0; // En el sentido de las agujas del reloj o en sentido contrario
-      
-        //       ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
-      
-        //       if (i > 1) {
-        //         ctx.fill();
-        //       } else {
-        //         ctx.stroke();
-        //       }
-        //     }
-        //   }
-    }
-}
+
+btn_increase_size.addEventListener('click', e => {
+  if (draw_size < 100){
+    draw_size = draw_size + 5
+    btn_set_size.textContent = draw_size
+  }
+})
+
+btn_decrease_size.addEventListener('click', e => {
+  if (draw_size > 5){
+    draw_size = draw_size - 5
+    btn_set_size.textContent = draw_size
+  }
+})
 
 
 canvasContainer.addEventListener('mousedown', (e)=>{
   isPressed = true
   originX = e.offsetX
   originY = e.offsetY
-  console.log('mouse click')
 })
 
 canvasContainer.addEventListener('mouseup', (e)=>{
   isPressed = false
-  console.log('mouse dejo de hacer click')
 })
 
 canvasContainer.addEventListener('mousemove', e =>{
@@ -67,7 +51,8 @@ canvasContainer.addEventListener('mousemove', e =>{
 function drawCircle(arcX,arcY){
   let ctx = canvasContainer.getContext('2d')
   ctx.beginPath()
-  const radius = 10; // Radio del Arco
+  ctx.fillStyle = btn_change_color.value
+  const radius = draw_size; // Radio del Arco
   const startAngle = 0; // Punto inicial del Círculo
   const endAngle = Math.PI *2; // Punto final del Círculo
   const counterclockwise = 1 % 2 !== 0; // En el
@@ -76,12 +61,12 @@ function drawCircle(arcX,arcY){
 }
 
 function drawLine(originX,originY, arcX, arcY){
-  console.log('drawing line',originX,originY,arcX, arcY)
   let ctx = canvasContainer.getContext('2d')
   ctx.beginPath()
+  ctx.strokeStyle =  btn_change_color.value
   ctx.moveTo(originX,originY)
   ctx.lineTo(arcX, arcY)
-  ctx.lineWidth = 10 *2 ;
+  ctx.lineWidth = draw_size *2 ;
   ctx.closePath()
   ctx.stroke()
 
