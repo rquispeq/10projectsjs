@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+canvas {
+    border: 1px solid black;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 800px;
+}
+
+#stockGraph{
+    border: 2px solid purple;
+}
+
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 804px;
+    padding: 1rem;
+    background-color: purple;
+    gap: 0.5rem;
+    border: 2px solid purple;
+}
+
+.options button, span, input{
+    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    overflow: visible;
+    white-space: normal;
+    word-wrap: break-word;
+    background-color: white;
+    border: none;
+}
+
+.clear{
+    margin-left: auto;
+}
