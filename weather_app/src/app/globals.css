@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #white;
     --foreground: #ededed;
   }
 }
@@ -18,4 +18,75 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+
+.container{
+  min-height: 100vh;
+  text-align: center;
+}
+
+.main-info{
+  height: calc(100vh*0.3);
+  /* background-color: green; */
+  background-image: url(https://www.thecityofldn.com/wp-content/uploads/2023/05/jamiesmithphoto-2162-Tower-Bridge-with-City-behind-reduced-2000x1334.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 
+    2px 1px 3px black  /* Contorno superior derecho */
+    /* -2px -2px 15px #2e2e2e, Contorno superior izquierdo */
+    /* 2px -2px 15px #2e2e2e,  Contorno inferior derecho */
+    /* -2px 2px 15px #2e2e2e;  Contorno inferior izquierdo */
+}
+
+.main-info .city{
+  padding: 1rem 0;
+}
+
+.main-info .current-weather{
+  padding-top: 3rem ;
+  padding-bottom: 2rem;
+}
+
+.main-info .current-weather .tempeture{
+  font-size: 3rem;
+}
+
+
+.extra-info{
+  height: calc(100vh*0.5);
+  background-color: white;
+  color:gray;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.extra-info .weather-day{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.extra-info .weather-day .day-name{
+  margin-right: 4rem;
+}
+
+.extra-info .weather-day .tempeture{
+  font-weight: bold;
+}
+
+.change-location{
+  height: calc(100vh*0.2);
+  background-color: grey;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
