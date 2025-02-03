@@ -56,6 +56,7 @@ body {
 
 .main-info{
   max-height: calc(100vh*0.3);
+  min-height: calc(100vh*0.3);
   width: 100%;
   /* background-color: green; */
   background-image: url(https://www.thecityofldn.com/wp-content/uploads/2023/05/jamiesmithphoto-2162-Tower-Bridge-with-City-behind-reduced-2000x1334.jpg);
@@ -85,6 +86,7 @@ body {
 
 .extra-info{
   max-height: calc(100vh*0.5);
+  min-height: calc(100vh*0.5);
   background-color: white;
   color:gray;
   padding: 2rem;
@@ -114,6 +116,7 @@ body {
 
 .change-location{
   min-height: calc(100vh*0.2);
+  max-height: calc(100vh*0.2);
   background-color: grey;
   color: white;
   display: flex;
