@@ -58,11 +58,12 @@ body {
   max-height: calc(100vh*0.3);
   min-height: calc(100vh*0.3);
   width: 100%;
-  /* background-color: green; */
-  background-image: url(https://www.thecityofldn.com/wp-content/uploads/2023/05/jamiesmithphoto-2162-Tower-Bridge-with-City-behind-reduced-2000x1334.jpg);
+  /* background-image: url(https://www.thecityofldn.com/wp-content/uploads/2023/05/jamiesmithphoto-2162-Tower-Bridge-with-City-behind-reduced-2000x1334.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: rgba(0, 0, 0, 0.15);
+  background-blend-mode: overlay;
   text-shadow: 
     2px 1px 3px black  /* Contorno superior derecho */
     /* -2px -2px 15px #2e2e2e, Contorno superior izquierdo */
