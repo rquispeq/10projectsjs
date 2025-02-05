@@ -125,3 +125,48 @@ body {
   align-items: center;
   width: 100%;
 }
+
+.form_search{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100vh;
+  background-color: white;
+  width: 100%;
+  transition: top 0.5s;
+  padding: 2rem 1rem;
+  color: black;
+}
+
+
+.form_search.active{
+  top: 0;
+}
+
+.form_search .txt_search, button[type="submit"]{
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+.close_search{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75rem;
+  margin: 0.25rem;
+  background-color: red;
+  /* padding: 8px; */
+  width: 1rem;
+  height: 1rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.city-list{
+  margin: 1rem;
+}
+
+.city-list ul li{
+  padding: 0.5rem 0;
+}
