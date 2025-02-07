@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   const city = req.query.name
 
   const cityRes = await fetch(
-    `http://api.geonames.org/searchJSON?q=${city}&maxRows=15&username=${process.env.CITY_API_USERNAME}`
+    `http://api.geonames.org/searchJSON?name=${city}&maxRows=25&orderby=[relevance,population]&username=${process.env.CITY_API_USERNAME}`
   )
 
   if (!cityRes.ok) {

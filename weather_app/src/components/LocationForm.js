@@ -6,26 +6,48 @@ export default function LocationForm() {
   const [isOpen, setOpen] = useState(false)
   return (
     <>
-    <button type="button" className="change-location" onClick={ () => setOpen(true)}>
-      change location
-    </button>
-    
-    {<form className={"form_search " + (isOpen ? "active": "") }>
-      <input className="txt_search" type="text" placeholder="Buscar ciudad" />
-      <button type="submit">Buscar</button>
-      <button className="close_search" type="button" onClick={ () => setOpen(false)}>x</button>
+      <button
+        type="button"
+        className="change-location"
+        onClick={() => setOpen(true)}
+      >
+        change location
+      </button>
 
-      <div className="city-list">
-        <ul>
-          <li>City 1, Country</li>
-          <li>City 2, Country</li>
-          <li>City 3, Country</li>
-          <li>City 4, Country</li>
-        </ul>
-      </div>
+      {
+        <form
+          className={'form_search ' + (isOpen ? 'active' : '')}
+          onSubmit={handlerSubmit}
+        >
+          <input
+            ref={inputSearchRef}
+            name="txt_search"
+            className="txt_search"
+            type="text"
+            placeholder="Buscar ciudad"
+          />
+          <button type="submit">Buscar</button>
+          <button
+            className="close_search"
+            type="button"
+            onClick={() => setOpen(false)}
+          >
+            x
+          </button>
 
-
-    </form>}
+          {cities.length > 0 && (
+            <div className="city-list">
+              <ul>
+                {cities.map((city, index) => (
+                  <li key={index} onClick={() => handlerChangeLocation(city)}>
+                    {city.name}, {city.adminName1}, {city.countryName}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </form>
+      }
     </>
-  );
+  )
 }

@@ -169,4 +169,10 @@ body {
 
 .city-list ul li{
   padding: 0.5rem 0;
+  transition: background-color 0.2s;
+}
+
+.city-list ul li:active{
+  background-color: lightgray;
+  border-radius: 5px;
 }
