@@ -1,9 +1,37 @@
-"use client";
+'use client'
 
-import { useState } from "react";
+import { WeatherContext } from '@/context/WeatherContext'
+import { useContext, useRef, useState } from 'react'
 
 export default function LocationForm() {
   const [isOpen, setOpen] = useState(false)
+
+  const [cities, setCities] = useState([])
+
+  const {fetchWeather} = useContext(WeatherContext)
+
+  const inputSearchRef = useRef(null)
+
+  const handlerSubmit = async function (e) {
+    e.preventDefault()
+    const cityName = e.target.txt_search.value
+    const cityRes = await fetch('api/city?name=' + cityName)
+    const cityData = await cityRes.json()
+
+    cityData.geonames = cityData.geonames.filter((city) => {
+      return city.name.includes(cityName) && city.fclName.includes('city')
+    })
+    setCities(cityData.geonames)
+  }
+
+  const handlerChangeLocation = (city) => {
+    setOpen(false)
+    setCities([])
+    inputSearchRef.current.value = ''
+    fetchWeather(city.name)
+    // setWeatherData(88888)
+  }
+
   return (
     <>
       <button
