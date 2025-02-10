@@ -1,5 +1,4 @@
 'use client'
-import { getWeather } from '@/lib/getWeather'
 import { createContext, useEffect, useState } from 'react'
 
 export const WeatherContext = createContext(null)
@@ -10,7 +9,6 @@ export default function WeatherProvider({ children }) {
   const [city, setCity] = useState(null)
   // Función para actualizar el clima cuando cambia la ciudad
   const fetchWeather = async (lat, lon, name, adminName1, countryName) => {
-    // const { weatherData, forecastData } = await getWeather(newCity);
     const city = `${name}, ${adminName1}, ${countryName}`
     const res = await fetch(`api/weather?lat=${lat}&lon=${lon}`)
     if (!res.ok) throw new Error('Failed to fetch weather data')

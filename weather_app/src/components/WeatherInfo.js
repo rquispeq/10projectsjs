@@ -1,11 +1,6 @@
 'use client'
-import { WeatherContext } from '@/context/WeatherContext'
-import { useContext } from 'react'
 
 export default function WeatherInfo({ weather, city }) {
-  // const {weatherData, setWeatherData} = useContext(WeatherContext)
-  // console.log('WeatherInfo using WeatherContext', weatherData)
-  console.log('WeatherInfo', weather)
   return (
     <div
       className="main-info"

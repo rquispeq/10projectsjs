@@ -30,7 +30,6 @@ export default function LocationForm() {
     setCities([])
     inputSearchRef.current.value = ''
     fetchWeather(lat, lon, name, adminName1, countryName)
-    // setWeatherData(88888)
   }
 
   return (
