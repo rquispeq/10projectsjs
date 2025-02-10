@@ -8,7 +8,7 @@ export default function LocationForm() {
 
   const [cities, setCities] = useState([])
 
-  const {fetchWeather} = useContext(WeatherContext)
+  const { fetchWeather } = useContext(WeatherContext)
 
   const inputSearchRef = useRef(null)
 
@@ -24,11 +24,11 @@ export default function LocationForm() {
     setCities(cityData.geonames)
   }
 
-  const handlerChangeLocation = (city) => {
+  const handlerChangeLocation = (lat, lon, name, adminName1, countryName) => {
     setOpen(false)
     setCities([])
     inputSearchRef.current.value = ''
-    fetchWeather(city.name)
+    fetchWeather(lat, lon, name, adminName1, countryName)
     // setWeatherData(88888)
   }
 
@@ -54,20 +54,33 @@ export default function LocationForm() {
             type="text"
             placeholder="Buscar ciudad"
           />
-          <button type="submit">Buscar</button>
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
           <button
             className="close_search"
             type="button"
             onClick={() => setOpen(false)}
           >
-            x
+            <i class="fa-solid fa-xmark"></i>
           </button>
 
           {cities.length > 0 && (
             <div className="city-list">
               <ul>
                 {cities.map((city, index) => (
-                  <li key={index} onClick={() => handlerChangeLocation(city)}>
+                  <li
+                    key={index}
+                    onClick={() =>
+                      handlerChangeLocation(
+                        city.lat,
+                        city.lng,
+                        city.name,
+                        city.adminName1,
+                        city.countryName
+                      )
+                    }
+                  >
                     {city.name}, {city.adminName1}, {city.countryName}
                   </li>
                 ))}

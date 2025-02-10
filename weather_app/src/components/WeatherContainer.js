@@ -7,11 +7,11 @@ import WeatherForecast from './WeatherForecast'
 import LocationForm from './LocationForm'
 
 export default function Weathercontainer() {
-  const { weatherData, forecastData } = useContext(WeatherContext)
-  console.log("weatherData in Container", weatherData)
+  const { weatherData, forecastData, city } = useContext(WeatherContext)
+  console.log('weatherData in Container', weatherData)
   return (
     <div className="container">
-      {weatherData && <WeatherInfo weather={weatherData} />}
+      {weatherData && <WeatherInfo weather={weatherData} city={city} />}
       {forecastData && <WeatherForecast forecast={forecastData} />}
       <LocationForm />
     </div>

@@ -9,23 +9,27 @@ export default function WeatherProvider({ children }) {
   const [forecastData, setForecastData] = useState(null)
   const [city, setCity] = useState(null)
   // Función para actualizar el clima cuando cambia la ciudad
-  const fetchWeather = async (newCity) => {
-    console.log('getting weather data for', newCity)
+  const fetchWeather = async (lat, lon, name, adminName1, countryName) => {
     // const { weatherData, forecastData } = await getWeather(newCity);
-    const res = await fetch(`api/weather?city=${newCity}`)
+    const city = `${name}, ${adminName1}, ${countryName}`
+    const res = await fetch(`api/weather?lat=${lat}&lon=${lon}`)
     if (!res.ok) throw new Error('Failed to fetch weather data')
     const { weatherData, forecastData } = await res.json()
-    console.log('weatherData after fetch in fetchWeather', weatherData,res)
     setWeatherData(weatherData)
     setForecastData(forecastData)
-    setCity(newCity)
+    setCity(city)
   }
 
   // Cargar datos iniciales
   useEffect(() => {
-    console.log("getting initial weather data")
-    fetchWeather("Lima");
-  }, []);
+    // lattide and longitude of Lima
+    const name = 'Lima'
+    const adminName1 = 'Lima Province'
+    const countryName = 'Peru'
+    const lat = -12.04318
+    const lon = -77.02824
+    fetchWeather(lat, lon, name, adminName1, countryName)
+  }, [])
   return (
     <WeatherContext.Provider
       value={{ weatherData, forecastData, city, fetchWeather }}
