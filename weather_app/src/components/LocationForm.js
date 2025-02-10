@@ -14,7 +14,8 @@ export default function LocationForm() {
 
   const handlerSubmit = async function (e) {
     e.preventDefault()
-    const cityName = e.target.txt_search.value
+    // capitalize first letter
+    const cityName = e.target.txt_search.value.charAt(0).toUpperCase() + e.target.txt_search.value.slice(1)
     const cityRes = await fetch('api/city?name=' + cityName)
     const cityData = await cityRes.json()
 
@@ -39,7 +40,8 @@ export default function LocationForm() {
         className="change-location"
         onClick={() => setOpen(true)}
       >
-        change location
+        <i className="fa-solid fa-city"></i> 
+          Change location
       </button>
 
       {
@@ -55,14 +57,14 @@ export default function LocationForm() {
             placeholder="Buscar ciudad"
           />
           <button type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i className="fa-solid fa-magnifying-glass"></i>
           </button>
           <button
             className="close_search"
             type="button"
             onClick={() => setOpen(false)}
           >
-            <i class="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark"></i>
           </button>
 
           {cities.length > 0 && (

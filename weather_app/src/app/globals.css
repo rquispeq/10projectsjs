@@ -126,6 +126,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 0.5rem;
 }
 
 .form_search{
@@ -156,7 +157,6 @@ body {
   right: 0;
   padding: 0.75rem;
   margin: 0.25rem;
-  background-color: red;
   /* padding: 8px; */
   width: 1rem;
   height: 1rem;
@@ -172,6 +172,7 @@ body {
 .city-list ul li{
   padding: 0.5rem 0;
   transition: background-color 0.2s;
+  border-bottom: 1px solid lightgray;
 }
 
 .city-list ul li:active{
