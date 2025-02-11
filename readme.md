@@ -56,6 +56,12 @@ Link: https://rquispeq.github.io/10projectsjs/drawing_app/
 
 ![image](https://github.com/user-attachments/assets/29a6dc40-5994-4cb9-b187-2575633277dc)
 
+# Weather App
+
+Link: https://10projectsjs.vercel.app/
+
+![image](https://github.com/user-attachments/assets/1ee55437-d111-4124-a849-0c8937d3153d)
+
+
 ## Pending Projects
 - Movie App
-- Weather App
