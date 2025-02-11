@@ -10,8 +10,8 @@ export default function Weathercontainer() {
   const { weatherData, forecastData, city } = useContext(WeatherContext)
   return (
     <div className="container">
-      {weatherData && <WeatherInfo weather={weatherData} city={city} />}
-      {forecastData && <WeatherForecast forecast={forecastData} />}
+      {<WeatherInfo weather={weatherData} city={city} />}
+      {<WeatherForecast forecast={forecastData} />}
       <LocationForm />
     </div>
   )

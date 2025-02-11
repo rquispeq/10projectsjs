@@ -75,15 +75,25 @@ body {
 
 .main-info .city{
   padding: 1rem 0;
+  display: inline-block;
 }
 
 .main-info .current-weather{
   padding-top: 3rem ;
   padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .main-info .current-weather .tempeture{
   font-size: 3rem;
+  display: inline-block;
+}
+
+.main-info .current-weather .description{
+  display: inline-block;
 }
 
 
