@@ -183,9 +183,15 @@ body {
   padding: 0.5rem 0;
   transition: background-color 0.2s;
   border-bottom: 1px solid lightgray;
+  cursor: pointer;
 }
 
-.city-list ul li:active{
+.city-list ul li:hover{
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+}
+
+.city-list ul li:active, .city-list ul li:focus{
   background-color: lightgray;
   border-radius: 5px;
 }
