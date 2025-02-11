@@ -43,8 +43,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Ubuntu Mono' Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu Mono', Arial, Helvetica, sans-serif;
   height: 100vh;
+  font-size: 1.15rem;
 }
 
 
@@ -67,7 +68,7 @@ body {
   background-color: rgba(0, 0, 0, 0.15);
   background-blend-mode: overlay;
   text-shadow: 
-    2px 1px 3px black  /* Contorno superior derecho */
+    1px 1px 1px black  /* Contorno superior derecho */
     /* -2px -2px 15px #2e2e2e, Contorno superior izquierdo */
     /* 2px -2px 15px #2e2e2e,  Contorno inferior derecho */
     /* -2px 2px 15px #2e2e2e;  Contorno inferior izquierdo */

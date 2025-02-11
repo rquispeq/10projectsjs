@@ -21,8 +21,5 @@ export default async function handler(req, res) {
 
   forecastData.data.shift() // Quitamos el primer día
 
-  console.log('weatherData', weatherData)
-  console.log('forecastData', forecastData)
-
   res.status(200).json({ weatherData, forecastData })
 }
